@@ -13,5 +13,6 @@
         Else
             MsgBox("Error")
         End If
+        MenuS.Show()
     End Sub
 End Class
