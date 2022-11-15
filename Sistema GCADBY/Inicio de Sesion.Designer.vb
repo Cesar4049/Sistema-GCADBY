@@ -26,11 +26,11 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.tbusuario = New System.Windows.Forms.TextBox()
-        Me.tbcontraseña = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.tbcontraseña = New System.Windows.Forms.TextBox()
+        Me.tbusuario = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -82,38 +82,6 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(68, 41)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(234, 22)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Ingresa tus credenciales"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(68, 120)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(209, 22)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Ingresa tu contraseña"
-        '
-        'tbusuario
-        '
-        Me.tbusuario.Location = New System.Drawing.Point(72, 76)
-        Me.tbusuario.Name = "tbusuario"
-        Me.tbusuario.Size = New System.Drawing.Size(288, 29)
-        Me.tbusuario.TabIndex = 2
-        '
-        'tbcontraseña
-        '
-        Me.tbcontraseña.Location = New System.Drawing.Point(72, 157)
-        Me.tbcontraseña.Name = "tbcontraseña"
-        Me.tbcontraseña.Size = New System.Drawing.Size(288, 29)
-        Me.tbcontraseña.TabIndex = 3
-        '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -124,6 +92,39 @@ Partial Class Form1
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Iniciar Sesion"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'tbcontraseña
+        '
+        Me.tbcontraseña.Location = New System.Drawing.Point(72, 157)
+        Me.tbcontraseña.Name = "tbcontraseña"
+        Me.tbcontraseña.Size = New System.Drawing.Size(288, 29)
+        Me.tbcontraseña.TabIndex = 3
+        '
+        'tbusuario
+        '
+        Me.tbusuario.Location = New System.Drawing.Point(72, 76)
+        Me.tbusuario.Name = "tbusuario"
+        Me.tbusuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbusuario.Size = New System.Drawing.Size(288, 29)
+        Me.tbusuario.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(68, 120)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(209, 22)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Ingresa tu contraseña"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(68, 41)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(234, 22)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Ingresa tus credenciales"
         '
         'Form1
         '

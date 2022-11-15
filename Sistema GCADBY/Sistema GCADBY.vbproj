@@ -131,6 +131,12 @@
     <Compile Include="Pagos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RegistroUsuarios.Designer.vb">
+      <DependentUpon>RegistroUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reserva de Cursos.Designer.vb">
       <DependentUpon>Reserva de Cursos.vb</DependentUpon>
     </Compile>
