@@ -34,4 +34,14 @@
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Consulta_de_cursos.Show()
     End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        RegistroUsuarios.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+        Form1.Show()
+        Me.Close()
+    End Sub
 End Class
