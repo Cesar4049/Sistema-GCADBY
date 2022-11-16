@@ -24,7 +24,9 @@ Partial Class MenuS
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -32,13 +34,11 @@ Partial Class MenuS
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,6 +68,17 @@ Partial Class MenuS
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         '
+        'IconButton1
+        '
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Sliders
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(298, 25)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(49, 45)
+        Me.IconButton1.TabIndex = 2
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -77,6 +88,16 @@ Partial Class MenuS
         Me.Label3.Size = New System.Drawing.Size(205, 36)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Usuario# 001"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Sistema_GCADBY.My.Resources.Resources.img_usuario
+        Me.PictureBox1.Location = New System.Drawing.Point(16, 14)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(65, 62)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'GroupBox1
         '
@@ -152,27 +173,6 @@ Partial Class MenuS
         Me.Button2.Text = "Generar Citas"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'IconButton1
-        '
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Sliders
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(298, 25)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(49, 45)
-        Me.IconButton1.TabIndex = 2
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Sistema_GCADBY.My.Resources.Resources.img_usuario
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 14)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(65, 62)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Sistema_GCADBY.My.Resources.Resources.Logo
@@ -209,8 +209,8 @@ Partial Class MenuS
         Me.Text = "Menu"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
