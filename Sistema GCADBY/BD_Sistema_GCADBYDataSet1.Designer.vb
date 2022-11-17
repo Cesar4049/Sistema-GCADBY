@@ -5488,12 +5488,19 @@ Namespace BD_Sistema_GCADBYDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Nom_Cur, Cursos_Cur, Fecha_Cur, Hora_Cur, Costo_Cur, Local_Cur FROM Cursos"& _ 
                 ""
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        Nom_Cur, Cursos_Cur, Fecha_Cur, Hora_Cur, Costo_Cur, Local_Cur"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FRO"& _ 
+                "M            Cursos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Nom_Cur = ?) AND (Cursos_Cur = ?)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nom_Cur", Global.System.Data.OleDb.OleDbType.WChar, 40, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nom_Cur", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cursos_Cur", Global.System.Data.OleDb.OleDbType.WChar, 30, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cursos_Cur", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5515,6 +5522,50 @@ Namespace BD_Sistema_GCADBYDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As BD_Sistema_GCADBYDataSet.CursosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As BD_Sistema_GCADBYDataSet.CursosDataTable = New BD_Sistema_GCADBYDataSet.CursosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function BuscarDatos(ByVal dataTable As BD_Sistema_GCADBYDataSet.CursosDataTable, ByVal Nom_Cur As String, ByVal Cursos_Cur As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Nom_Cur Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nom_Cur")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Nom_Cur,String)
+            End If
+            If (Cursos_Cur Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Cursos_Cur,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy(ByVal Nom_Cur As String, ByVal Cursos_Cur As String) As BD_Sistema_GCADBYDataSet.CursosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Nom_Cur Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nom_Cur")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Nom_Cur,String)
+            End If
+            If (Cursos_Cur Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Cursos_Cur,String)
+            End If
             Dim dataTable As BD_Sistema_GCADBYDataSet.CursosDataTable = New BD_Sistema_GCADBYDataSet.CursosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
