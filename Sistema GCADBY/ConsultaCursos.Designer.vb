@@ -29,30 +29,36 @@ Partial Class Consulta_de_cursos
         Me.CursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.CursosTableAdapter()
         Me.TableAdapterManager = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager()
         Me.CursosBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.CursosDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CursosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ReservaCursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReservaCursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoDeCursoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CursosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CursosBindingNavigator.SuspendLayout()
-        CType(Me.CursosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BD_Sistema_GCADBYDataSet
@@ -76,7 +82,11 @@ Partial Class Consulta_de_cursos
         Me.TableAdapterManager.CompraTableAdapter = Nothing
         Me.TableAdapterManager.CuentasTableAdapter = Nothing
         Me.TableAdapterManager.CursosTableAdapter = Me.CursosTableAdapter
+        Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.Reservacion_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.ReservaCursosTableAdapter = Nothing
         Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.TipoServicioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
@@ -94,88 +104,9 @@ Partial Class Consulta_de_cursos
         Me.CursosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CursosBindingNavigator.Name = "CursosBindingNavigator"
         Me.CursosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CursosBindingNavigator.Size = New System.Drawing.Size(800, 25)
+        Me.CursosBindingNavigator.Size = New System.Drawing.Size(848, 25)
         Me.CursosBindingNavigator.TabIndex = 0
         Me.CursosBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'CursosDataGridView
-        '
-        Me.CursosDataGridView.AutoGenerateColumns = False
-        Me.CursosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CursosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.CursosDataGridView.DataSource = Me.CursosBindingSource
-        Me.CursosDataGridView.Location = New System.Drawing.Point(0, 28)
-        Me.CursosDataGridView.Name = "CursosDataGridView"
-        Me.CursosDataGridView.Size = New System.Drawing.Size(800, 422)
-        Me.CursosDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Nom_Cur"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Nom_Cur"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Cursos_Cur"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Cursos_Cur"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Fecha_Cur"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Fecha_Cur"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Hora_Cur"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Hora_Cur"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Costo_Cur"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Costo_Cur"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Local_Cur"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Local_Cur"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
         'BindingNavigatorAddNewItem
         '
@@ -185,6 +116,13 @@ Partial Class Consulta_de_cursos
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
         '
         'BindingNavigatorDeleteItem
         '
@@ -213,6 +151,25 @@ Partial Class Consulta_de_cursos
         Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
         'BindingNavigatorMoveNextItem
         '
         Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -231,6 +188,11 @@ Partial Class Consulta_de_cursos
         Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
         'CursosBindingNavigatorSaveItem
         '
         Me.CursosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -239,12 +201,92 @@ Partial Class Consulta_de_cursos
         Me.CursosBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CursosBindingNavigatorSaveItem.Text = "Guardar datos"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TipoDeCursoDataGridViewTextBoxColumn, Me.CostoDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.HorarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.ReservaCursosBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 25)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(848, 330)
+        Me.DataGridView1.TabIndex = 1
+        '
+        'ReservaCursosBindingSource
+        '
+        Me.ReservaCursosBindingSource.DataMember = "ReservaCursos"
+        Me.ReservaCursosBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
+        '
+        'ReservaCursosTableAdapter
+        '
+        Me.ReservaCursosTableAdapter.ClearBeforeFill = True
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        '
+        'TipoDeCursoDataGridViewTextBoxColumn
+        '
+        Me.TipoDeCursoDataGridViewTextBoxColumn.DataPropertyName = "Tipo de Curso"
+        Me.TipoDeCursoDataGridViewTextBoxColumn.HeaderText = "Tipo de Curso"
+        Me.TipoDeCursoDataGridViewTextBoxColumn.Name = "TipoDeCursoDataGridViewTextBoxColumn"
+        '
+        'CostoDataGridViewTextBoxColumn
+        '
+        Me.CostoDataGridViewTextBoxColumn.DataPropertyName = "Costo"
+        Me.CostoDataGridViewTextBoxColumn.HeaderText = "Costo"
+        Me.CostoDataGridViewTextBoxColumn.Name = "CostoDataGridViewTextBoxColumn"
+        '
+        'FechaDataGridViewTextBoxColumn
+        '
+        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
+        '
+        'HorarioDataGridViewTextBoxColumn
+        '
+        Me.HorarioDataGridViewTextBoxColumn.DataPropertyName = "Horario"
+        Me.HorarioDataGridViewTextBoxColumn.HeaderText = "Horario"
+        Me.HorarioDataGridViewTextBoxColumn.Name = "HorarioDataGridViewTextBoxColumn"
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'ApellidoDataGridViewTextBoxColumn
+        '
+        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido"
+        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "Apellido"
+        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(366, 397)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(101, 33)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Regresar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Consulta_de_cursos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.CursosDataGridView)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ClientSize = New System.Drawing.Size(848, 475)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.CursosBindingNavigator)
         Me.Name = "Consulta_de_cursos"
         Me.Text = "Consulta_de_cursos"
@@ -253,7 +295,8 @@ Partial Class Consulta_de_cursos
         CType(Me.CursosBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CursosBindingNavigator.ResumeLayout(False)
         Me.CursosBindingNavigator.PerformLayout()
-        CType(Me.CursosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -276,11 +319,16 @@ Partial Class Consulta_de_cursos
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents CursosBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents CursosDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ReservaCursosBindingSource As BindingSource
+    Friend WithEvents ReservaCursosTableAdapter As BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter
+    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TipoDeCursoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HorarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class

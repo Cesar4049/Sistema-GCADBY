@@ -1,17 +1,9 @@
 ﻿Imports System.Data.OleDb
 Public Class ConsultaDeCitas
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Cesar\Desktop\Sistema-GCADBY\Sistema GCADBY\BD Sistema GCADBY.accdb;Persist Security Info=True]")
-        Dim comandoSQL As New OleDbCommand("SELECT * FROM ReservaCursos", conexion)
-        Dim miDataReader As OleDbDataReader
-        Dim miDataTable As New DataTable()
 
-        conexion.Open()
-        miDataReader = comandoSQL.ExecuteReader
-        miDataTable.Load(miDataReader)
-
-        Me.DataGridView1.DataSource = miDataTable
-        conexion.Close()
+    Private Sub ConsultaDeCitas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_Sistema_GCADBYDataSet.Reservacion_de_Citas' Puede moverla o quitarla según sea necesario.
+        Me.Reservacion_de_CitasTableAdapter.Fill(Me.BD_Sistema_GCADBYDataSet.Reservacion_de_Citas)
 
     End Sub
 End Class
