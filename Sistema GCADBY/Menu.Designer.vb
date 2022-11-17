@@ -32,7 +32,6 @@ Partial Class MenuS
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
@@ -105,7 +104,6 @@ Partial Class MenuS
         Me.GroupBox1.Controls.Add(Me.Button7)
         Me.GroupBox1.Controls.Add(Me.Button5)
         Me.GroupBox1.Controls.Add(Me.Button4)
-        Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Location = New System.Drawing.Point(64, 222)
         Me.GroupBox1.Name = "GroupBox1"
@@ -116,7 +114,7 @@ Partial Class MenuS
         'Button8
         '
         Me.Button8.Font = New System.Drawing.Font("Arial Narrow", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(678, 201)
+        Me.Button8.Location = New System.Drawing.Point(375, 201)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(236, 131)
         Me.Button8.TabIndex = 6
@@ -126,9 +124,9 @@ Partial Class MenuS
         'Button7
         '
         Me.Button7.Font = New System.Drawing.Font("Arial Narrow", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(375, 201)
+        Me.Button7.Location = New System.Drawing.Point(678, 49)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(236, 131)
+        Me.Button7.Size = New System.Drawing.Size(236, 283)
         Me.Button7.TabIndex = 5
         Me.Button7.Text = "Inventario"
         Me.Button7.UseVisualStyleBackColor = True
@@ -146,22 +144,12 @@ Partial Class MenuS
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Arial Narrow", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(678, 49)
+        Me.Button4.Location = New System.Drawing.Point(375, 49)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(236, 131)
         Me.Button4.TabIndex = 2
         Me.Button4.Text = "Reservar Cursos"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Arial Narrow", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(375, 49)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(236, 131)
-        Me.Button3.TabIndex = 1
-        Me.Button3.Text = "Pagos"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -227,7 +215,6 @@ Partial Class MenuS
     Friend WithEvents Button7 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
 End Class

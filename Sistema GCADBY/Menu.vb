@@ -21,7 +21,7 @@
         Me.Close()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Pagos.Show()
         Me.Close()
     End Sub
@@ -32,7 +32,7 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Reserva_de_Cursos.Show()
+        ReservacionDeCursos.Show()
         Me.Close()
     End Sub
 

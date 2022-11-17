@@ -105,10 +105,10 @@
     <Compile Include="BD_Sistema_GCADBYDataSet1.vb">
       <DependentUpon>BD_Sistema_GCADBYDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ConsultaCitas.Designer.vb">
-      <DependentUpon>ConsultaCitas.vb</DependentUpon>
+    <Compile Include="----.Designer.vb">
+      <DependentUpon>----.vb</DependentUpon>
     </Compile>
-    <Compile Include="ConsultaCitas.vb">
+    <Compile Include="----.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultaCursos.Designer.vb">
@@ -117,10 +117,16 @@
     <Compile Include="ConsultaCursos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenerarCitas.Designer.vb">
-      <DependentUpon>GenerarCitas.vb</DependentUpon>
+    <Compile Include="--.Designer.vb">
+      <DependentUpon>--.vb</DependentUpon>
     </Compile>
-    <Compile Include="GenerarCitas.vb">
+    <Compile Include="--.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaDeCitas.Designer.vb">
+      <DependentUpon>ConsultaDeCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaDeCitas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicio de Sesion.vb">
@@ -146,6 +152,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -169,28 +176,43 @@
     <Compile Include="RegistroUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reserva de Cursos.Designer.vb">
-      <DependentUpon>Reserva de Cursos.vb</DependentUpon>
+    <Compile Include="-.Designer.vb">
+      <DependentUpon>-.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reserva de Cursos.vb">
+    <Compile Include="-.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReservaDeCitas.Designer.vb">
-      <DependentUpon>ReservaDeCitas.vb</DependentUpon>
+    <Compile Include="---.Designer.vb">
+      <DependentUpon>---.vb</DependentUpon>
     </Compile>
-    <Compile Include="ReservaDeCitas.vb">
+    <Compile Include="---.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservacionDeCursos.Designer.vb">
+      <DependentUpon>ReservacionDeCursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReservacionDeCursos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservasDeCitas.Designer.vb">
+      <DependentUpon>ReservasDeCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReservasDeCitas.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ConsultaCitas.resx">
-      <DependentUpon>ConsultaCitas.vb</DependentUpon>
+    <EmbeddedResource Include="----.resx">
+      <DependentUpon>----.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCursos.resx">
       <DependentUpon>ConsultaCursos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GenerarCitas.resx">
-      <DependentUpon>GenerarCitas.vb</DependentUpon>
+    <EmbeddedResource Include="--.resx">
+      <DependentUpon>--.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaDeCitas.resx">
+      <DependentUpon>ConsultaDeCitas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio de Sesion.resx">
       <DependentUpon>Inicio de Sesion.vb</DependentUpon>
@@ -213,11 +235,17 @@
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reserva de Cursos.resx">
-      <DependentUpon>Reserva de Cursos.vb</DependentUpon>
+    <EmbeddedResource Include="-.resx">
+      <DependentUpon>-.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReservaDeCitas.resx">
-      <DependentUpon>ReservaDeCitas.vb</DependentUpon>
+    <EmbeddedResource Include="---.resx">
+      <DependentUpon>---.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservacionDeCursos.resx">
+      <DependentUpon>ReservacionDeCursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservasDeCitas.resx">
+      <DependentUpon>ReservasDeCitas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
