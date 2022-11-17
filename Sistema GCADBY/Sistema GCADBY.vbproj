@@ -102,6 +102,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_Sistema_GCADBYDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BD_Sistema_GCADBYDataSet1.vb">
+      <DependentUpon>BD_Sistema_GCADBYDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaCitas.Designer.vb">
       <DependentUpon>ConsultaCitas.vb</DependentUpon>
     </Compile>

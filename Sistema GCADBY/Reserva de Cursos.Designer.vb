@@ -23,13 +23,13 @@ Partial Class Reserva_de_Cursos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reserva_de_Cursos))
         Dim Nom_CurLabel As System.Windows.Forms.Label
         Dim Cursos_CurLabel As System.Windows.Forms.Label
         Dim Fecha_CurLabel As System.Windows.Forms.Label
         Dim Hora_CurLabel As System.Windows.Forms.Label
         Dim Costo_CurLabel As System.Windows.Forms.Label
         Dim Local_CurLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reserva_de_Cursos))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
         Me.CursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -48,14 +48,16 @@ Partial Class Reserva_de_Cursos
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CursosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Agenda_de_CitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Agenda_de_CitasTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.Agenda_de_CitasTableAdapter()
         Me.Nom_CurTextBox = New System.Windows.Forms.TextBox()
         Me.Cursos_CurTextBox = New System.Windows.Forms.TextBox()
         Me.Fecha_CurDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Hora_CurDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Hora_CurTextBox = New System.Windows.Forms.TextBox()
         Me.Costo_CurTextBox = New System.Windows.Forms.TextBox()
         Me.Local_CurTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Nom_CurLabel = New System.Windows.Forms.Label()
         Cursos_CurLabel = New System.Windows.Forms.Label()
         Fecha_CurLabel = New System.Windows.Forms.Label()
@@ -66,73 +68,15 @@ Partial Class Reserva_de_Cursos
         CType(Me.CursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CursosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CursosBindingNavigator.SuspendLayout()
+        CType(Me.Agenda_de_CitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Nom_CurLabel
-        '
-        Nom_CurLabel.AutoSize = True
-        Nom_CurLabel.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Nom_CurLabel.Location = New System.Drawing.Point(65, 168)
-        Nom_CurLabel.Name = "Nom_CurLabel"
-        Nom_CurLabel.Size = New System.Drawing.Size(82, 18)
-        Nom_CurLabel.TabIndex = 2
-        Nom_CurLabel.Text = "Nom Cur:"
-        '
-        'Cursos_CurLabel
-        '
-        Cursos_CurLabel.AutoSize = True
-        Cursos_CurLabel.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Cursos_CurLabel.Location = New System.Drawing.Point(44, 209)
-        Cursos_CurLabel.Name = "Cursos_CurLabel"
-        Cursos_CurLabel.Size = New System.Drawing.Size(103, 18)
-        Cursos_CurLabel.TabIndex = 4
-        Cursos_CurLabel.Text = "Cursos Cur:"
-        '
-        'Fecha_CurLabel
-        '
-        Fecha_CurLabel.AutoSize = True
-        Fecha_CurLabel.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Fecha_CurLabel.Location = New System.Drawing.Point(51, 254)
-        Fecha_CurLabel.Name = "Fecha_CurLabel"
-        Fecha_CurLabel.Size = New System.Drawing.Size(96, 18)
-        Fecha_CurLabel.TabIndex = 6
-        Fecha_CurLabel.Text = "Fecha Cur:"
-        '
-        'Hora_CurLabel
-        '
-        Hora_CurLabel.AutoSize = True
-        Hora_CurLabel.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Hora_CurLabel.Location = New System.Drawing.Point(62, 295)
-        Hora_CurLabel.Name = "Hora_CurLabel"
-        Hora_CurLabel.Size = New System.Drawing.Size(85, 18)
-        Hora_CurLabel.TabIndex = 8
-        Hora_CurLabel.Text = "Hora Cur:"
-        '
-        'Costo_CurLabel
-        '
-        Costo_CurLabel.AutoSize = True
-        Costo_CurLabel.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Costo_CurLabel.Location = New System.Drawing.Point(436, 163)
-        Costo_CurLabel.Name = "Costo_CurLabel"
-        Costo_CurLabel.Size = New System.Drawing.Size(93, 18)
-        Costo_CurLabel.TabIndex = 10
-        Costo_CurLabel.Text = "Costo Cur:"
-        '
-        'Local_CurLabel
-        '
-        Local_CurLabel.AutoSize = True
-        Local_CurLabel.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Local_CurLabel.Location = New System.Drawing.Point(439, 209)
-        Local_CurLabel.Name = "Local_CurLabel"
-        Local_CurLabel.Size = New System.Drawing.Size(90, 18)
-        Local_CurLabel.TabIndex = 12
-        Local_CurLabel.Text = "Local Cur:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(215, 54)
+        Me.Label1.Location = New System.Drawing.Point(186, 70)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(372, 36)
         Me.Label1.TabIndex = 0
@@ -159,7 +103,9 @@ Partial Class Reserva_de_Cursos
         Me.TableAdapterManager.CompraTableAdapter = Nothing
         Me.TableAdapterManager.CuentasTableAdapter = Nothing
         Me.TableAdapterManager.CursosTableAdapter = Me.CursosTableAdapter
+        Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
         Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.TipoServicioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
@@ -176,8 +122,9 @@ Partial Class Reserva_de_Cursos
         Me.CursosBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.CursosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CursosBindingNavigator.Name = "CursosBindingNavigator"
+        Me.CursosBindingNavigator.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
         Me.CursosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CursosBindingNavigator.Size = New System.Drawing.Size(800, 25)
+        Me.CursosBindingNavigator.Size = New System.Drawing.Size(781, 25)
         Me.CursosBindingNavigator.TabIndex = 1
         Me.CursosBindingNavigator.Text = "BindingNavigator1"
         '
@@ -235,7 +182,7 @@ Partial Class Reserva_de_Cursos
         Me.BindingNavigatorPositionItem.AutoSize = False
         Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(81, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
@@ -275,68 +222,15 @@ Partial Class Reserva_de_Cursos
         Me.CursosBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CursosBindingNavigatorSaveItem.Text = "Guardar datos"
         '
-        'Nom_CurTextBox
-        '
-        Me.Nom_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Nom_Cur", True))
-        Me.Nom_CurTextBox.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Nom_CurTextBox.Location = New System.Drawing.Point(153, 165)
-        Me.Nom_CurTextBox.Name = "Nom_CurTextBox"
-        Me.Nom_CurTextBox.Size = New System.Drawing.Size(244, 26)
-        Me.Nom_CurTextBox.TabIndex = 3
-        '
-        'Cursos_CurTextBox
-        '
-        Me.Cursos_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Cursos_Cur", True))
-        Me.Cursos_CurTextBox.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cursos_CurTextBox.Location = New System.Drawing.Point(153, 206)
-        Me.Cursos_CurTextBox.Name = "Cursos_CurTextBox"
-        Me.Cursos_CurTextBox.Size = New System.Drawing.Size(244, 26)
-        Me.Cursos_CurTextBox.TabIndex = 5
-        '
-        'Fecha_CurDateTimePicker
-        '
-        Me.Fecha_CurDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.CursosBindingSource, "Fecha_Cur", True))
-        Me.Fecha_CurDateTimePicker.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fecha_CurDateTimePicker.Location = New System.Drawing.Point(153, 248)
-        Me.Fecha_CurDateTimePicker.Name = "Fecha_CurDateTimePicker"
-        Me.Fecha_CurDateTimePicker.Size = New System.Drawing.Size(331, 26)
-        Me.Fecha_CurDateTimePicker.TabIndex = 7
-        '
-        'Hora_CurDateTimePicker
-        '
-        Me.Hora_CurDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.CursosBindingSource, "Hora_Cur", True))
-        Me.Hora_CurDateTimePicker.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Hora_CurDateTimePicker.Location = New System.Drawing.Point(153, 289)
-        Me.Hora_CurDateTimePicker.Name = "Hora_CurDateTimePicker"
-        Me.Hora_CurDateTimePicker.Size = New System.Drawing.Size(331, 26)
-        Me.Hora_CurDateTimePicker.TabIndex = 9
-        '
-        'Costo_CurTextBox
-        '
-        Me.Costo_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Costo_Cur", True))
-        Me.Costo_CurTextBox.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Costo_CurTextBox.Location = New System.Drawing.Point(535, 160)
-        Me.Costo_CurTextBox.Name = "Costo_CurTextBox"
-        Me.Costo_CurTextBox.Size = New System.Drawing.Size(200, 26)
-        Me.Costo_CurTextBox.TabIndex = 11
-        '
-        'Local_CurTextBox
-        '
-        Me.Local_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Local_Cur", True))
-        Me.Local_CurTextBox.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Local_CurTextBox.Location = New System.Drawing.Point(535, 206)
-        Me.Local_CurTextBox.Name = "Local_CurTextBox"
-        Me.Local_CurTextBox.Size = New System.Drawing.Size(200, 26)
-        Me.Local_CurTextBox.TabIndex = 13
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(221, 362)
+        Me.Button1.Location = New System.Drawing.Point(84, 422)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 32)
+        Me.Button1.Size = New System.Drawing.Size(173, 44)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "Reservar"
         Me.Button1.UseVisualStyleBackColor = False
@@ -346,21 +240,131 @@ Partial Class Reserva_de_Cursos
         Me.Button2.BackColor = System.Drawing.Color.Transparent
         Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(483, 362)
+        Me.Button2.Location = New System.Drawing.Point(471, 422)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(104, 32)
+        Me.Button2.Size = New System.Drawing.Size(173, 44)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Regresar"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Agenda_de_CitasBindingSource
+        '
+        Me.Agenda_de_CitasBindingSource.DataMember = "Agenda de Citas"
+        Me.Agenda_de_CitasBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
+        '
+        'Agenda_de_CitasTableAdapter
+        '
+        Me.Agenda_de_CitasTableAdapter.ClearBeforeFill = True
+        '
+        'Nom_CurLabel
+        '
+        Nom_CurLabel.AutoSize = True
+        Nom_CurLabel.Location = New System.Drawing.Point(48, 157)
+        Nom_CurLabel.Name = "Nom_CurLabel"
+        Nom_CurLabel.Size = New System.Drawing.Size(82, 18)
+        Nom_CurLabel.TabIndex = 15
+        Nom_CurLabel.Text = "Nom Cur:"
+        '
+        'Nom_CurTextBox
+        '
+        Me.Nom_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Nom_Cur", True))
+        Me.Nom_CurTextBox.Location = New System.Drawing.Point(157, 154)
+        Me.Nom_CurTextBox.Name = "Nom_CurTextBox"
+        Me.Nom_CurTextBox.Size = New System.Drawing.Size(401, 26)
+        Me.Nom_CurTextBox.TabIndex = 16
+        '
+        'Cursos_CurLabel
+        '
+        Cursos_CurLabel.AutoSize = True
+        Cursos_CurLabel.Location = New System.Drawing.Point(48, 189)
+        Cursos_CurLabel.Name = "Cursos_CurLabel"
+        Cursos_CurLabel.Size = New System.Drawing.Size(103, 18)
+        Cursos_CurLabel.TabIndex = 17
+        Cursos_CurLabel.Text = "Cursos Cur:"
+        '
+        'Cursos_CurTextBox
+        '
+        Me.Cursos_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Cursos_Cur", True))
+        Me.Cursos_CurTextBox.Location = New System.Drawing.Point(157, 186)
+        Me.Cursos_CurTextBox.Name = "Cursos_CurTextBox"
+        Me.Cursos_CurTextBox.Size = New System.Drawing.Size(401, 26)
+        Me.Cursos_CurTextBox.TabIndex = 18
+        '
+        'Fecha_CurLabel
+        '
+        Fecha_CurLabel.AutoSize = True
+        Fecha_CurLabel.Location = New System.Drawing.Point(48, 222)
+        Fecha_CurLabel.Name = "Fecha_CurLabel"
+        Fecha_CurLabel.Size = New System.Drawing.Size(96, 18)
+        Fecha_CurLabel.TabIndex = 19
+        Fecha_CurLabel.Text = "Fecha Cur:"
+        '
+        'Fecha_CurDateTimePicker
+        '
+        Me.Fecha_CurDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.CursosBindingSource, "Fecha_Cur", True))
+        Me.Fecha_CurDateTimePicker.Location = New System.Drawing.Point(157, 218)
+        Me.Fecha_CurDateTimePicker.Name = "Fecha_CurDateTimePicker"
+        Me.Fecha_CurDateTimePicker.Size = New System.Drawing.Size(401, 26)
+        Me.Fecha_CurDateTimePicker.TabIndex = 20
+        '
+        'Hora_CurLabel
+        '
+        Hora_CurLabel.AutoSize = True
+        Hora_CurLabel.Location = New System.Drawing.Point(48, 253)
+        Hora_CurLabel.Name = "Hora_CurLabel"
+        Hora_CurLabel.Size = New System.Drawing.Size(85, 18)
+        Hora_CurLabel.TabIndex = 21
+        Hora_CurLabel.Text = "Hora Cur:"
+        '
+        'Hora_CurTextBox
+        '
+        Me.Hora_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Hora_Cur", True))
+        Me.Hora_CurTextBox.Location = New System.Drawing.Point(157, 250)
+        Me.Hora_CurTextBox.Name = "Hora_CurTextBox"
+        Me.Hora_CurTextBox.Size = New System.Drawing.Size(239, 26)
+        Me.Hora_CurTextBox.TabIndex = 22
+        '
+        'Costo_CurLabel
+        '
+        Costo_CurLabel.AutoSize = True
+        Costo_CurLabel.Location = New System.Drawing.Point(48, 285)
+        Costo_CurLabel.Name = "Costo_CurLabel"
+        Costo_CurLabel.Size = New System.Drawing.Size(93, 18)
+        Costo_CurLabel.TabIndex = 23
+        Costo_CurLabel.Text = "Costo Cur:"
+        '
+        'Costo_CurTextBox
+        '
+        Me.Costo_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Costo_Cur", True))
+        Me.Costo_CurTextBox.Location = New System.Drawing.Point(157, 282)
+        Me.Costo_CurTextBox.Name = "Costo_CurTextBox"
+        Me.Costo_CurTextBox.Size = New System.Drawing.Size(239, 26)
+        Me.Costo_CurTextBox.TabIndex = 24
+        '
+        'Local_CurLabel
+        '
+        Local_CurLabel.AutoSize = True
+        Local_CurLabel.Location = New System.Drawing.Point(48, 317)
+        Local_CurLabel.Name = "Local_CurLabel"
+        Local_CurLabel.Size = New System.Drawing.Size(90, 18)
+        Local_CurLabel.TabIndex = 25
+        Local_CurLabel.Text = "Local Cur:"
+        '
+        'Local_CurTextBox
+        '
+        Me.Local_CurTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CursosBindingSource, "Local_Cur", True))
+        Me.Local_CurTextBox.Location = New System.Drawing.Point(157, 314)
+        Me.Local_CurTextBox.Name = "Local_CurTextBox"
+        Me.Local_CurTextBox.Size = New System.Drawing.Size(239, 26)
+        Me.Local_CurTextBox.TabIndex = 26
+        '
         'Reserva_de_Cursos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(781, 552)
         Me.Controls.Add(Nom_CurLabel)
         Me.Controls.Add(Me.Nom_CurTextBox)
         Me.Controls.Add(Cursos_CurLabel)
@@ -368,14 +372,18 @@ Partial Class Reserva_de_Cursos
         Me.Controls.Add(Fecha_CurLabel)
         Me.Controls.Add(Me.Fecha_CurDateTimePicker)
         Me.Controls.Add(Hora_CurLabel)
-        Me.Controls.Add(Me.Hora_CurDateTimePicker)
+        Me.Controls.Add(Me.Hora_CurTextBox)
         Me.Controls.Add(Costo_CurLabel)
         Me.Controls.Add(Me.Costo_CurTextBox)
         Me.Controls.Add(Local_CurLabel)
         Me.Controls.Add(Me.Local_CurTextBox)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CursosBindingNavigator)
+        Me.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "Reserva_de_Cursos"
         Me.Text = "Reserva_de_Cursos"
         CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -383,6 +391,7 @@ Partial Class Reserva_de_Cursos
         CType(Me.CursosBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CursosBindingNavigator.ResumeLayout(False)
         Me.CursosBindingNavigator.PerformLayout()
+        CType(Me.Agenda_de_CitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -406,12 +415,14 @@ Partial Class Reserva_de_Cursos
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents CursosBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Agenda_de_CitasBindingSource As BindingSource
+    Friend WithEvents Agenda_de_CitasTableAdapter As BD_Sistema_GCADBYDataSetTableAdapters.Agenda_de_CitasTableAdapter
     Friend WithEvents Nom_CurTextBox As TextBox
     Friend WithEvents Cursos_CurTextBox As TextBox
     Friend WithEvents Fecha_CurDateTimePicker As DateTimePicker
-    Friend WithEvents Hora_CurDateTimePicker As DateTimePicker
+    Friend WithEvents Hora_CurTextBox As TextBox
     Friend WithEvents Costo_CurTextBox As TextBox
     Friend WithEvents Local_CurTextBox As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
 End Class
