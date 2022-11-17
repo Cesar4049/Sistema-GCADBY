@@ -35,12 +35,12 @@ Partial Class GenerarCitas
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.HoraTextBox = New System.Windows.Forms.TextBox()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
-        Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
-        Me.ServicioTextBox = New System.Windows.Forms.TextBox()
         Me.EstilistaTextBox = New System.Windows.Forms.TextBox()
+        Me.ServicioTextBox = New System.Windows.Forms.TextBox()
+        Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.HoraTextBox = New System.Windows.Forms.TextBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label1 = New System.Windows.Forms.Label()
         HoraLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
@@ -52,6 +52,51 @@ Partial Class GenerarCitas
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'HoraLabel
+        '
+        HoraLabel.AutoSize = True
+        HoraLabel.Location = New System.Drawing.Point(34, 245)
+        HoraLabel.Name = "HoraLabel"
+        HoraLabel.Size = New System.Drawing.Size(55, 22)
+        HoraLabel.TabIndex = 1
+        HoraLabel.Text = "Hora:"
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(424, 82)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(83, 22)
+        NombreLabel.TabIndex = 3
+        NombreLabel.Text = "Nombre:"
+        '
+        'ApellidoLabel
+        '
+        ApellidoLabel.AutoSize = True
+        ApellidoLabel.Location = New System.Drawing.Point(423, 133)
+        ApellidoLabel.Name = "ApellidoLabel"
+        ApellidoLabel.Size = New System.Drawing.Size(84, 22)
+        ApellidoLabel.TabIndex = 5
+        ApellidoLabel.Text = "Apellido:"
+        '
+        'ServicioLabel
+        '
+        ServicioLabel.AutoSize = True
+        ServicioLabel.Location = New System.Drawing.Point(423, 218)
+        ServicioLabel.Name = "ServicioLabel"
+        ServicioLabel.Size = New System.Drawing.Size(152, 22)
+        ServicioLabel.TabIndex = 7
+        ServicioLabel.Text = "Tipo de Servicio:"
+        '
+        'EstilistaLabel
+        '
+        EstilistaLabel.AutoSize = True
+        EstilistaLabel.Location = New System.Drawing.Point(423, 263)
+        EstilistaLabel.Name = "EstilistaLabel"
+        EstilistaLabel.Size = New System.Drawing.Size(164, 22)
+        EstilistaLabel.TabIndex = 9
+        EstilistaLabel.Text = "Estilista a atender:"
         '
         'BD_Sistema_GCADBYDataSet
         '
@@ -75,6 +120,7 @@ Partial Class GenerarCitas
         Me.TableAdapterManager.CuentasTableAdapter = Nothing
         Me.TableAdapterManager.CursosTableAdapter = Nothing
         Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.Reservacion_de_CitasTableAdapter = Nothing
         Me.TableAdapterManager.ServiciosTableAdapter = Nothing
         Me.TableAdapterManager.TipoServicioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -125,71 +171,13 @@ Partial Class GenerarCitas
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         '
-        'MonthCalendar1
+        'EstilistaTextBox
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(38, 57)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 0
-        '
-        'HoraLabel
-        '
-        HoraLabel.AutoSize = True
-        HoraLabel.Location = New System.Drawing.Point(34, 245)
-        HoraLabel.Name = "HoraLabel"
-        HoraLabel.Size = New System.Drawing.Size(55, 22)
-        HoraLabel.TabIndex = 1
-        HoraLabel.Text = "Hora:"
-        '
-        'HoraTextBox
-        '
-        Me.HoraTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Agenda_de_CitasBindingSource, "Hora", True))
-        Me.HoraTextBox.Location = New System.Drawing.Point(104, 242)
-        Me.HoraTextBox.Name = "HoraTextBox"
-        Me.HoraTextBox.Size = New System.Drawing.Size(168, 29)
-        Me.HoraTextBox.TabIndex = 2
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(424, 82)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(83, 22)
-        NombreLabel.TabIndex = 3
-        NombreLabel.Text = "Nombre:"
-        '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Agenda_de_CitasBindingSource, "Nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(513, 79)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(279, 29)
-        Me.NombreTextBox.TabIndex = 4
-        '
-        'ApellidoLabel
-        '
-        ApellidoLabel.AutoSize = True
-        ApellidoLabel.Location = New System.Drawing.Point(423, 133)
-        ApellidoLabel.Name = "ApellidoLabel"
-        ApellidoLabel.Size = New System.Drawing.Size(84, 22)
-        ApellidoLabel.TabIndex = 5
-        ApellidoLabel.Text = "Apellido:"
-        '
-        'ApellidoTextBox
-        '
-        Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Agenda_de_CitasBindingSource, "Apellido", True))
-        Me.ApellidoTextBox.Location = New System.Drawing.Point(514, 133)
-        Me.ApellidoTextBox.Name = "ApellidoTextBox"
-        Me.ApellidoTextBox.Size = New System.Drawing.Size(278, 29)
-        Me.ApellidoTextBox.TabIndex = 6
-        '
-        'ServicioLabel
-        '
-        ServicioLabel.AutoSize = True
-        ServicioLabel.Location = New System.Drawing.Point(423, 218)
-        ServicioLabel.Name = "ServicioLabel"
-        ServicioLabel.Size = New System.Drawing.Size(152, 22)
-        ServicioLabel.TabIndex = 7
-        ServicioLabel.Text = "Tipo de Servicio:"
+        Me.EstilistaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Agenda_de_CitasBindingSource, "Estilista", True))
+        Me.EstilistaTextBox.Location = New System.Drawing.Point(597, 260)
+        Me.EstilistaTextBox.Name = "EstilistaTextBox"
+        Me.EstilistaTextBox.Size = New System.Drawing.Size(195, 29)
+        Me.EstilistaTextBox.TabIndex = 10
         '
         'ServicioTextBox
         '
@@ -199,22 +187,35 @@ Partial Class GenerarCitas
         Me.ServicioTextBox.Size = New System.Drawing.Size(195, 29)
         Me.ServicioTextBox.TabIndex = 8
         '
-        'EstilistaLabel
+        'ApellidoTextBox
         '
-        EstilistaLabel.AutoSize = True
-        EstilistaLabel.Location = New System.Drawing.Point(423, 263)
-        EstilistaLabel.Name = "EstilistaLabel"
-        EstilistaLabel.Size = New System.Drawing.Size(164, 22)
-        EstilistaLabel.TabIndex = 9
-        EstilistaLabel.Text = "Estilista a atender:"
+        Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Agenda_de_CitasBindingSource, "Apellido", True))
+        Me.ApellidoTextBox.Location = New System.Drawing.Point(514, 133)
+        Me.ApellidoTextBox.Name = "ApellidoTextBox"
+        Me.ApellidoTextBox.Size = New System.Drawing.Size(278, 29)
+        Me.ApellidoTextBox.TabIndex = 6
         '
-        'EstilistaTextBox
+        'NombreTextBox
         '
-        Me.EstilistaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Agenda_de_CitasBindingSource, "Estilista", True))
-        Me.EstilistaTextBox.Location = New System.Drawing.Point(597, 260)
-        Me.EstilistaTextBox.Name = "EstilistaTextBox"
-        Me.EstilistaTextBox.Size = New System.Drawing.Size(195, 29)
-        Me.EstilistaTextBox.TabIndex = 10
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Agenda_de_CitasBindingSource, "Nombre", True))
+        Me.NombreTextBox.Location = New System.Drawing.Point(513, 79)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(279, 29)
+        Me.NombreTextBox.TabIndex = 4
+        '
+        'HoraTextBox
+        '
+        Me.HoraTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Agenda_de_CitasBindingSource, "Hora", True))
+        Me.HoraTextBox.Location = New System.Drawing.Point(104, 242)
+        Me.HoraTextBox.Name = "HoraTextBox"
+        Me.HoraTextBox.Size = New System.Drawing.Size(168, 29)
+        Me.HoraTextBox.TabIndex = 2
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(38, 57)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 0
         '
         'Label1
         '

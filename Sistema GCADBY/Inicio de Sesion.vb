@@ -10,6 +10,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Me.CuentasTableAdapter.BuscarUsuarios(Me.BD_Sistema_GCADBYDataSet.Cuentas, UsuarioTextBox.Text, PasswordTextBox.Text) Then
             MenuS.Show()
+            Me.Hide()
         Else
             MsgBox("Error")
         End If
