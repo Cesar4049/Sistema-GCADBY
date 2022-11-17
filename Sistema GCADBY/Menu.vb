@@ -3,7 +3,7 @@
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) 
 
     End Sub
 
@@ -41,17 +41,20 @@
         Me.Close()
     End Sub
 
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
-        RegistroUsuarios.Show()
-        Me.Close()
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
-        Form1.Show()
         Me.Close()
     End Sub
 
     Private Sub MenuS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form1.Show()
+        Me.Close()
     End Sub
 End Class

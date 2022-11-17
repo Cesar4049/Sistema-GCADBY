@@ -50,6 +50,7 @@ Partial Class Form1
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CuentasBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.Button2 = New System.Windows.Forms.Button()
         UsuarioLabel = New System.Windows.Forms.Label()
         PasswordLabel = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,6 +114,7 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(PasswordLabel)
         Me.GroupBox1.Controls.Add(Me.PasswordTextBox)
         Me.GroupBox1.Controls.Add(UsuarioLabel)
@@ -174,7 +176,11 @@ Partial Class Form1
         Me.TableAdapterManager.CompraTableAdapter = Nothing
         Me.TableAdapterManager.CuentasTableAdapter = Me.CuentasTableAdapter
         Me.TableAdapterManager.CursosTableAdapter = Nothing
+        Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.Reservacion_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.ReservaCursosTableAdapter = Nothing
         Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.TipoServicioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
@@ -291,6 +297,17 @@ Partial Class Form1
         Me.CuentasBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CuentasBindingNavigatorSaveItem.Text = "Guardar datos"
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button2.Location = New System.Drawing.Point(48, 163)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(131, 28)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Registrar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -342,4 +359,5 @@ Partial Class Form1
     Friend WithEvents CuentasBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents UsuarioTextBox As TextBox
+    Friend WithEvents Button2 As Button
 End Class

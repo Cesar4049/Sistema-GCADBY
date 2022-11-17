@@ -3,6 +3,8 @@ Imports System.Data
 Public Class Inventario
     Dim Cadena As New OleDbConnection
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_Sistema_GCADBYDataSet.Inventario' Puede moverla o quitarla según sea necesario.
+        Me.InventarioTableAdapter.Fill(Me.BD_Sistema_GCADBYDataSet.Inventario)
         'TODO: esta línea de código carga datos en la tabla 'BD_Sistema_GCADBYDataSet.Reservacion_de_Citas' Puede moverla o quitarla según sea necesario.
         Me.Reservacion_de_CitasTableAdapter.Fill(Me.BD_Sistema_GCADBYDataSet.Reservacion_de_Citas)
         'TODO: esta línea de código carga datos en la tabla 'BD_Sistema_GCADBYDataSet.ReservaCursos' Puede moverla o quitarla según sea necesario.
@@ -14,8 +16,17 @@ Public Class Inventario
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         MenuS.Show()
-        Me.Hide()
+        Me.Close()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        RegistroInventario.Show()
+        Me.Close()
     End Sub
 End Class

@@ -23,56 +23,44 @@ Partial Class Inventario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.ServiciosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
-        Me.ServiciosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ServiciosTableAdapter()
         Me.CursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaGCADBYDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.CursosTableAdapter()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
         Me.ReservaCursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ReservaCursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoDeCursoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ReservacionDeCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Reservacion_de_CitasTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.Reservacion_de_CitasTableAdapter()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ServiciosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.NomSerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ServSerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioSerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DispSerDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.ServiciosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ServiciosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ServiciosTableAdapter()
+        Me.CursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.CursosTableAdapter()
+        Me.ReservaCursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter()
+        Me.Reservacion_de_CitasTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.Reservacion_de_CitasTableAdapter()
+        Me.InventarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InventarioTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.InventarioTableAdapter()
+        Me.TableAdapterManager = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager()
+        Me.InventarioDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.ServiciosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaGCADBYDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReservacionDeCitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ServiciosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ServiciosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventarioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ServiciosBindingSource
-        '
-        Me.ServiciosBindingSource.DataMember = "Servicios"
-        Me.ServiciosBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
-        '
-        'BD_Sistema_GCADBYDataSet
-        '
-        Me.BD_Sistema_GCADBYDataSet.DataSetName = "BD_Sistema_GCADBYDataSet"
-        Me.BD_Sistema_GCADBYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ServiciosTableAdapter
-        '
-        Me.ServiciosTableAdapter.ClearBeforeFill = True
         '
         'CursosBindingSource
         '
@@ -84,158 +72,205 @@ Partial Class Inventario
         Me.BDSistemaGCADBYDataSetBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
         Me.BDSistemaGCADBYDataSetBindingSource.Position = 0
         '
-        'CursosTableAdapter
+        'BD_Sistema_GCADBYDataSet
         '
-        Me.CursosTableAdapter.ClearBeforeFill = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TipoDeCursoDataGridViewTextBoxColumn, Me.CostoDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.HorarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.ReservaCursosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(-1, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(856, 199)
-        Me.DataGridView1.TabIndex = 0
+        Me.BD_Sistema_GCADBYDataSet.DataSetName = "BD_Sistema_GCADBYDataSet"
+        Me.BD_Sistema_GCADBYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReservaCursosBindingSource
         '
         Me.ReservaCursosBindingSource.DataMember = "ReservaCursos"
         Me.ReservaCursosBindingSource.DataSource = Me.BDSistemaGCADBYDataSetBindingSource
         '
-        'ReservaCursosTableAdapter
-        '
-        Me.ReservaCursosTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        '
-        'TipoDeCursoDataGridViewTextBoxColumn
-        '
-        Me.TipoDeCursoDataGridViewTextBoxColumn.DataPropertyName = "Tipo de Curso"
-        Me.TipoDeCursoDataGridViewTextBoxColumn.HeaderText = "Tipo de Curso"
-        Me.TipoDeCursoDataGridViewTextBoxColumn.Name = "TipoDeCursoDataGridViewTextBoxColumn"
-        '
-        'CostoDataGridViewTextBoxColumn
-        '
-        Me.CostoDataGridViewTextBoxColumn.DataPropertyName = "Costo"
-        Me.CostoDataGridViewTextBoxColumn.HeaderText = "Costo"
-        Me.CostoDataGridViewTextBoxColumn.Name = "CostoDataGridViewTextBoxColumn"
-        '
-        'FechaDataGridViewTextBoxColumn
-        '
-        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
-        '
-        'HorarioDataGridViewTextBoxColumn
-        '
-        Me.HorarioDataGridViewTextBoxColumn.DataPropertyName = "Horario"
-        Me.HorarioDataGridViewTextBoxColumn.HeaderText = "Horario"
-        Me.HorarioDataGridViewTextBoxColumn.Name = "HorarioDataGridViewTextBoxColumn"
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'ApellidoDataGridViewTextBoxColumn
-        '
-        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "Apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        '
         'ReservacionDeCitasBindingSource
         '
         Me.ReservacionDeCitasBindingSource.DataMember = "Reservacion de Citas"
         Me.ReservacionDeCitasBindingSource.DataSource = Me.BDSistemaGCADBYDataSetBindingSource
-        '
-        'Reservacion_de_CitasTableAdapter
-        '
-        Me.Reservacion_de_CitasTableAdapter.ClearBeforeFill = True
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AutoGenerateColumns = False
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NomSerDataGridViewTextBoxColumn, Me.ServSerDataGridViewTextBoxColumn, Me.PrecioSerDataGridViewTextBoxColumn, Me.DispSerDataGridViewCheckBoxColumn})
-        Me.DataGridView2.DataSource = Me.ServiciosBindingSource1
-        Me.DataGridView2.Location = New System.Drawing.Point(-1, 205)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(856, 154)
-        Me.DataGridView2.TabIndex = 1
         '
         'ServiciosBindingSource1
         '
         Me.ServiciosBindingSource1.DataMember = "Servicios"
         Me.ServiciosBindingSource1.DataSource = Me.BDSistemaGCADBYDataSetBindingSource
         '
-        'NomSerDataGridViewTextBoxColumn
+        'IconButton1
         '
-        Me.NomSerDataGridViewTextBoxColumn.DataPropertyName = "Nom_Ser"
-        Me.NomSerDataGridViewTextBoxColumn.HeaderText = "Nom_Ser"
-        Me.NomSerDataGridViewTextBoxColumn.Name = "NomSerDataGridViewTextBoxColumn"
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBack
+        Me.IconButton1.IconColor = System.Drawing.Color.White
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(952, 432)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(59, 59)
+        Me.IconButton1.TabIndex = 21
+        Me.IconButton1.UseVisualStyleBackColor = False
         '
-        'ServSerDataGridViewTextBoxColumn
+        'ServiciosBindingSource
         '
-        Me.ServSerDataGridViewTextBoxColumn.DataPropertyName = "Serv_Ser"
-        Me.ServSerDataGridViewTextBoxColumn.HeaderText = "Serv_Ser"
-        Me.ServSerDataGridViewTextBoxColumn.Name = "ServSerDataGridViewTextBoxColumn"
+        Me.ServiciosBindingSource.DataMember = "Servicios"
+        Me.ServiciosBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
         '
-        'PrecioSerDataGridViewTextBoxColumn
+        'ServiciosTableAdapter
         '
-        Me.PrecioSerDataGridViewTextBoxColumn.DataPropertyName = "Precio_Ser"
-        Me.PrecioSerDataGridViewTextBoxColumn.HeaderText = "Precio_Ser"
-        Me.PrecioSerDataGridViewTextBoxColumn.Name = "PrecioSerDataGridViewTextBoxColumn"
+        Me.ServiciosTableAdapter.ClearBeforeFill = True
         '
-        'DispSerDataGridViewCheckBoxColumn
+        'CursosTableAdapter
         '
-        Me.DispSerDataGridViewCheckBoxColumn.DataPropertyName = "Disp_Ser"
-        Me.DispSerDataGridViewCheckBoxColumn.HeaderText = "Disp_Ser"
-        Me.DispSerDataGridViewCheckBoxColumn.Name = "DispSerDataGridViewCheckBoxColumn"
+        Me.CursosTableAdapter.ClearBeforeFill = True
+        '
+        'ReservaCursosTableAdapter
+        '
+        Me.ReservaCursosTableAdapter.ClearBeforeFill = True
+        '
+        'Reservacion_de_CitasTableAdapter
+        '
+        Me.Reservacion_de_CitasTableAdapter.ClearBeforeFill = True
+        '
+        'InventarioBindingSource
+        '
+        Me.InventarioBindingSource.DataMember = "Inventario"
+        Me.InventarioBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
+        '
+        'InventarioTableAdapter
+        '
+        Me.InventarioTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.Agenda_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CompraTableAdapter = Nothing
+        Me.TableAdapterManager.CuentasTableAdapter = Nothing
+        Me.TableAdapterManager.CursosTableAdapter = Nothing
+        Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.InventarioTableAdapter = Me.InventarioTableAdapter
+        Me.TableAdapterManager.Reservacion_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.ReservaCursosTableAdapter = Nothing
+        Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.TipoServicioTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.VentaTableAdapter = Nothing
+        '
+        'InventarioDataGridView
+        '
+        Me.InventarioDataGridView.AutoGenerateColumns = False
+        Me.InventarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.InventarioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.InventarioDataGridView.DataSource = Me.InventarioBindingSource
+        Me.InventarioDataGridView.Location = New System.Drawing.Point(81, 124)
+        Me.InventarioDataGridView.Name = "InventarioDataGridView"
+        Me.InventarioDataGridView.Size = New System.Drawing.Size(848, 302)
+        Me.InventarioDataGridView.TabIndex = 21
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Nombre Producto"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Nombre Producto"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Descripcion"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Descripcion"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Tratamiento  o Servicio"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Tratamiento  o Servicio"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Descontinuado"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Descontinuado"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Stock"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Stock"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Precio unitario"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Precio unitario"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Precio venta"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Precio venta"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label2.Font = New System.Drawing.Font("Arial", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(403, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(184, 42)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "Inventario"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Sistema_GCADBY.My.Resources.Resources.Logo
+        Me.PictureBox2.Location = New System.Drawing.Point(246, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(101, 95)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 23
+        Me.PictureBox2.TabStop = False
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(376, 400)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(81, 450)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 34)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Regresar"
+        Me.Button1.Size = New System.Drawing.Size(222, 41)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Dar de Alta productos"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(855, 473)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1035, 503)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView2)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.InventarioDataGridView)
+        Me.Controls.Add(Me.IconButton1)
+        Me.ForeColor = System.Drawing.Color.White
         Me.Name = "Inventario"
         Me.Text = "Inventario"
-        CType(Me.ServiciosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CursosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaGCADBYDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReservacionDeCitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ServiciosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ServiciosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventarioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents BD_Sistema_GCADBYDataSet As BD_Sistema_GCADBYDataSet
@@ -244,24 +279,25 @@ Partial Class Inventario
     Friend WithEvents BDSistemaGCADBYDataSetBindingSource As BindingSource
     Friend WithEvents CursosBindingSource As BindingSource
     Friend WithEvents CursosTableAdapter As BD_Sistema_GCADBYDataSetTableAdapters.CursosTableAdapter
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ReservaCursosBindingSource As BindingSource
     Friend WithEvents ReservaCursosTableAdapter As BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TipoDeCursoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CostoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents HorarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ReservacionDeCitasBindingSource As BindingSource
     Friend WithEvents Reservacion_de_CitasTableAdapter As BD_Sistema_GCADBYDataSetTableAdapters.Reservacion_de_CitasTableAdapter
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents NomSerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ServSerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PrecioSerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DispSerDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents ServiciosBindingSource1 As BindingSource
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents InventarioBindingSource As BindingSource
+    Friend WithEvents InventarioTableAdapter As BD_Sistema_GCADBYDataSetTableAdapters.InventarioTableAdapter
+    Friend WithEvents TableAdapterManager As BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents InventarioDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button1 As Button
 End Class

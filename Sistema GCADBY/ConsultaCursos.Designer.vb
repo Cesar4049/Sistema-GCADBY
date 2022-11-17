@@ -52,13 +52,16 @@ Partial Class Consulta_de_cursos
         Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ReservaCursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReservaCursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CursosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CursosBindingNavigator.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BD_Sistema_GCADBYDataSet
@@ -104,7 +107,7 @@ Partial Class Consulta_de_cursos
         Me.CursosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CursosBindingNavigator.Name = "CursosBindingNavigator"
         Me.CursosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CursosBindingNavigator.Size = New System.Drawing.Size(848, 25)
+        Me.CursosBindingNavigator.Size = New System.Drawing.Size(966, 25)
         Me.CursosBindingNavigator.TabIndex = 0
         Me.CursosBindingNavigator.Text = "BindingNavigator1"
         '
@@ -208,9 +211,9 @@ Partial Class Consulta_de_cursos
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TipoDeCursoDataGridViewTextBoxColumn, Me.CostoDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.HorarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ReservaCursosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 47)
+        Me.DataGridView1.Location = New System.Drawing.Point(46, 179)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(848, 330)
+        Me.DataGridView1.Size = New System.Drawing.Size(875, 286)
         Me.DataGridView1.TabIndex = 1
         '
         'IdDataGridViewTextBoxColumn
@@ -270,23 +273,52 @@ Partial Class Consulta_de_cursos
         '
         Me.ReservaCursosTableAdapter.ClearBeforeFill = True
         '
-        'Button1
+        'PictureBox2
         '
-        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(366, 397)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 33)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Regresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.PictureBox2.Image = Global.Sistema_GCADBY.My.Resources.Resources.Logo
+        Me.PictureBox2.Location = New System.Drawing.Point(105, 38)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(119, 123)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label1.Font = New System.Drawing.Font("Arial", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(341, 93)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(321, 38)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Consulta de Cursos"
+        Me.Label1.UseMnemonic = False
+        '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBack
+        Me.IconButton1.IconColor = System.Drawing.Color.White
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(878, 483)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(59, 59)
+        Me.IconButton1.TabIndex = 21
+        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'Consulta_de_cursos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(848, 475)
-        Me.Controls.Add(Me.Button1)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(966, 554)
+        Me.Controls.Add(Me.IconButton1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.CursosBindingNavigator)
         Me.Name = "Consulta_de_cursos"
@@ -298,6 +330,7 @@ Partial Class Consulta_de_cursos
         Me.CursosBindingNavigator.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -331,5 +364,7 @@ Partial Class Consulta_de_cursos
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class

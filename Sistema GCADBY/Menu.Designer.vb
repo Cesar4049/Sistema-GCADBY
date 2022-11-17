@@ -23,20 +23,15 @@ Partial Class MenuS
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,55 +43,11 @@ Partial Class MenuS
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label2.Font = New System.Drawing.Font("Arial", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(118, 177)
+        Me.Label2.Location = New System.Drawing.Point(439, 86)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(263, 42)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Menu Principal"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.IconButton1)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.PictureBox1)
-        Me.GroupBox2.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(686, 26)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(353, 82)
-        Me.GroupBox2.TabIndex = 5
-        Me.GroupBox2.TabStop = False
-        '
-        'IconButton1
-        '
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Sliders
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(298, 25)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(49, 45)
-        Me.IconButton1.TabIndex = 2
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(87, 25)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(205, 36)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Usuario# 001"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Sistema_GCADBY.My.Resources.Resources.img_usuario
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 14)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(65, 62)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'GroupBox1
         '
@@ -105,7 +56,7 @@ Partial Class MenuS
         Me.GroupBox1.Controls.Add(Me.Button5)
         Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Location = New System.Drawing.Point(64, 222)
+        Me.GroupBox1.Location = New System.Drawing.Point(64, 192)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(975, 367)
         Me.GroupBox1.TabIndex = 1
@@ -161,6 +112,17 @@ Partial Class MenuS
         Me.Button2.Text = "Generar Citas"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'IconButton2
+        '
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.Location = New System.Drawing.Point(1035, 602)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(41, 42)
+        Me.IconButton2.TabIndex = 6
+        Me.IconButton2.UseVisualStyleBackColor = True
+        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Sistema_GCADBY.My.Resources.Resources.Logo
@@ -171,16 +133,15 @@ Partial Class MenuS
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
-        'IconButton2
+        'Button1
         '
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.Location = New System.Drawing.Point(998, 602)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(41, 42)
-        Me.IconButton2.TabIndex = 6
-        Me.IconButton2.UseVisualStyleBackColor = True
+        Me.Button1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(45, 602)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(119, 32)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Cerrar Sesion"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'MenuS
         '
@@ -188,16 +149,13 @@ Partial Class MenuS
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1098, 656)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.IconButton2)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "MenuS"
         Me.Text = "Menu"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -206,15 +164,12 @@ Partial Class MenuS
     End Sub
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Button1 As Button
 End Class

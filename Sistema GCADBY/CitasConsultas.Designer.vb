@@ -23,38 +23,27 @@ Partial Class CitasConsultas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
         Me.ReservacionDeCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Reservacion_de_CitasTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.Reservacion_de_CitasTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ServicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstilistaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox1.SuspendLayout()
+        Me.TableAdapterManager = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager()
+        Me.Reservacion_de_CitasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReservacionDeCitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Reservacion_de_CitasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(90, 149)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(959, 464)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
         '
         'Label1
         '
@@ -62,7 +51,7 @@ Partial Class CitasConsultas
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label1.Font = New System.Drawing.Font("Arial", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(446, 59)
+        Me.Label1.Location = New System.Drawing.Point(326, 60)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(290, 38)
         Me.Label1.TabIndex = 1
@@ -72,23 +61,12 @@ Partial Class CitasConsultas
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Sistema_GCADBY.My.Resources.Resources.Logo
-        Me.PictureBox2.Location = New System.Drawing.Point(207, 20)
+        Me.PictureBox2.Location = New System.Drawing.Point(150, 22)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(119, 123)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.ServicioDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.HoraDataGridViewTextBoxColumn, Me.EstilistaDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.ReservacionDeCitasBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(27, 60)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(901, 321)
-        Me.DataGridView1.TabIndex = 0
         '
         'BD_Sistema_GCADBYDataSet
         '
@@ -104,87 +82,127 @@ Partial Class CitasConsultas
         '
         Me.Reservacion_de_CitasTableAdapter.ClearBeforeFill = True
         '
-        'IdDataGridViewTextBoxColumn
+        'TableAdapterManager
         '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.TableAdapterManager.Agenda_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CompraTableAdapter = Nothing
+        Me.TableAdapterManager.CuentasTableAdapter = Nothing
+        Me.TableAdapterManager.CursosTableAdapter = Nothing
+        Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.Reservacion_de_CitasTableAdapter = Me.Reservacion_de_CitasTableAdapter
+        Me.TableAdapterManager.ReservaCursosTableAdapter = Nothing
+        Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.TipoServicioTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
-        'NombreDataGridViewTextBoxColumn
+        'Reservacion_de_CitasDataGridView
         '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.Reservacion_de_CitasDataGridView.AutoGenerateColumns = False
+        Me.Reservacion_de_CitasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Reservacion_de_CitasDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.Reservacion_de_CitasDataGridView.DataSource = Me.ReservacionDeCitasBindingSource
+        Me.Reservacion_de_CitasDataGridView.Location = New System.Drawing.Point(42, 182)
+        Me.Reservacion_de_CitasDataGridView.Name = "Reservacion_de_CitasDataGridView"
+        Me.Reservacion_de_CitasDataGridView.Size = New System.Drawing.Size(846, 297)
+        Me.Reservacion_de_CitasDataGridView.TabIndex = 4
         '
-        'ApellidosDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn1
         '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
-        'TelefonoDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn2
         '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Nombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
-        'ServicioDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn3
         '
-        Me.ServicioDataGridViewTextBoxColumn.DataPropertyName = "Servicio"
-        Me.ServicioDataGridViewTextBoxColumn.HeaderText = "Servicio"
-        Me.ServicioDataGridViewTextBoxColumn.Name = "ServicioDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Apellidos"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Apellidos"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'FechaDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn4
         '
-        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Telefono"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Telefono"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'HoraDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn5
         '
-        Me.HoraDataGridViewTextBoxColumn.DataPropertyName = "Hora"
-        Me.HoraDataGridViewTextBoxColumn.HeaderText = "Hora"
-        Me.HoraDataGridViewTextBoxColumn.Name = "HoraDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Servicio"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Servicio"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'EstilistaDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn6
         '
-        Me.EstilistaDataGridViewTextBoxColumn.DataPropertyName = "Estilista"
-        Me.EstilistaDataGridViewTextBoxColumn.HeaderText = "Estilista"
-        Me.EstilistaDataGridViewTextBoxColumn.Name = "EstilistaDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Fecha"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Fecha"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Hora"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Hora"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Estilista"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Estilista"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBack
+        Me.IconButton1.IconColor = System.Drawing.Color.White
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(894, 465)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(59, 59)
+        Me.IconButton1.TabIndex = 22
+        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'CitasConsultas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1318, 653)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(965, 536)
+        Me.Controls.Add(Me.IconButton1)
+        Me.Controls.Add(Me.Reservacion_de_CitasDataGridView)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "CitasConsultas"
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReservacionDeCitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Reservacion_de_CitasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BD_Sistema_GCADBYDataSet As BD_Sistema_GCADBYDataSet
     Friend WithEvents ReservacionDeCitasBindingSource As BindingSource
     Friend WithEvents Reservacion_de_CitasTableAdapter As BD_Sistema_GCADBYDataSetTableAdapters.Reservacion_de_CitasTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ServicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents HoraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EstilistaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TableAdapterManager As BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Reservacion_de_CitasDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class
