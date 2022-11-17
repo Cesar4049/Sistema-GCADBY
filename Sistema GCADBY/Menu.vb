@@ -17,7 +17,7 @@
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        ConsultaCitas.Show()
+        CitasConsultas.Show()
         Me.Close()
     End Sub
 

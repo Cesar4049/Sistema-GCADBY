@@ -42,8 +42,6 @@ Partial Class Consulta_de_cursos
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CursosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ReservaCursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ReservaCursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TipoDeCursoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CostoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,6 +50,8 @@ Partial Class Consulta_de_cursos
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReservaCursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReservaCursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -160,6 +160,7 @@ Partial Class Consulta_de_cursos
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -207,19 +208,10 @@ Partial Class Consulta_de_cursos
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TipoDeCursoDataGridViewTextBoxColumn, Me.CostoDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.HorarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ReservaCursosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 25)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 47)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(848, 330)
         Me.DataGridView1.TabIndex = 1
-        '
-        'ReservaCursosBindingSource
-        '
-        Me.ReservaCursosBindingSource.DataMember = "ReservaCursos"
-        Me.ReservaCursosBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
-        '
-        'ReservaCursosTableAdapter
-        '
-        Me.ReservaCursosTableAdapter.ClearBeforeFill = True
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -268,6 +260,15 @@ Partial Class Consulta_de_cursos
         Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
         Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
         Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'ReservaCursosBindingSource
+        '
+        Me.ReservaCursosBindingSource.DataMember = "ReservaCursos"
+        Me.ReservaCursosBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
+        '
+        'ReservaCursosTableAdapter
+        '
+        Me.ReservaCursosTableAdapter.ClearBeforeFill = True
         '
         'Button1
         '
