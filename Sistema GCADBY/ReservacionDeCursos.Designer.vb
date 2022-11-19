@@ -23,7 +23,6 @@ Partial Class ReservacionDeCursos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReservacionDeCursos))
         Dim Tipo_de_CursoLabel As System.Windows.Forms.Label
         Dim CostoLabel As System.Windows.Forms.Label
         Dim FechaLabel As System.Windows.Forms.Label
@@ -31,35 +30,36 @@ Partial Class ReservacionDeCursos
         Dim NombreLabel As System.Windows.Forms.Label
         Dim ApellidoLabel As System.Windows.Forms.Label
         Dim TelefonoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReservacionDeCursos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TelefonoTextBox = New System.Windows.Forms.TextBox()
+        Me.ReservaCursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
+        Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.FechaTextBox = New System.Windows.Forms.TextBox()
+        Me.CostoTextBox = New System.Windows.Forms.TextBox()
         Me.ReservaCursosBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ReservaCursosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.CostoTextBox = New System.Windows.Forms.TextBox()
-        Me.FechaTextBox = New System.Windows.Forms.TextBox()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
-        Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
-        Me.TelefonoTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ReservaCursosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
         Me.ReservaCursosTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.ReservaCursosTableAdapter()
         Me.TableAdapterManager = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager()
         Tipo_de_CursoLabel = New System.Windows.Forms.Label()
@@ -70,12 +70,76 @@ Partial Class ReservacionDeCursos
         ApellidoLabel = New System.Windows.Forms.Label()
         TelefonoLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReservaCursosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ReservaCursosBindingNavigator.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Tipo_de_CursoLabel
+        '
+        Tipo_de_CursoLabel.AutoSize = True
+        Tipo_de_CursoLabel.Location = New System.Drawing.Point(30, 48)
+        Tipo_de_CursoLabel.Name = "Tipo_de_CursoLabel"
+        Tipo_de_CursoLabel.Size = New System.Drawing.Size(146, 24)
+        Tipo_de_CursoLabel.TabIndex = 0
+        Tipo_de_CursoLabel.Text = "Tipo de Curso:"
+        '
+        'CostoLabel
+        '
+        CostoLabel.AutoSize = True
+        CostoLabel.Location = New System.Drawing.Point(104, 86)
+        CostoLabel.Name = "CostoLabel"
+        CostoLabel.Size = New System.Drawing.Size(72, 24)
+        CostoLabel.TabIndex = 2
+        CostoLabel.Text = "Costo:"
+        '
+        'FechaLabel
+        '
+        FechaLabel.AutoSize = True
+        FechaLabel.Location = New System.Drawing.Point(693, 55)
+        FechaLabel.Name = "FechaLabel"
+        FechaLabel.Size = New System.Drawing.Size(75, 24)
+        FechaLabel.TabIndex = 4
+        FechaLabel.Text = "Fecha:"
+        '
+        'HorarioLabel
+        '
+        HorarioLabel.AutoSize = True
+        HorarioLabel.Location = New System.Drawing.Point(683, 105)
+        HorarioLabel.Name = "HorarioLabel"
+        HorarioLabel.Size = New System.Drawing.Size(85, 24)
+        HorarioLabel.TabIndex = 6
+        HorarioLabel.Text = "Horario:"
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(27, 159)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(88, 24)
+        NombreLabel.TabIndex = 8
+        NombreLabel.Text = "Nombre:"
+        '
+        'ApellidoLabel
+        '
+        ApellidoLabel.AutoSize = True
+        ApellidoLabel.Location = New System.Drawing.Point(27, 209)
+        ApellidoLabel.Name = "ApellidoLabel"
+        ApellidoLabel.Size = New System.Drawing.Size(88, 24)
+        ApellidoLabel.TabIndex = 10
+        ApellidoLabel.Text = "Apellido:"
+        AddHandler ApellidoLabel.Click, AddressOf Me.ApellidoLabel_Click
+        '
+        'TelefonoLabel
+        '
+        TelefonoLabel.AutoSize = True
+        TelefonoLabel.Location = New System.Drawing.Point(20, 261)
+        TelefonoLabel.Name = "TelefonoLabel"
+        TelefonoLabel.Size = New System.Drawing.Size(95, 24)
+        TelefonoLabel.TabIndex = 12
+        TelefonoLabel.Text = "Telefono:"
         '
         'GroupBox1
         '
@@ -100,9 +164,101 @@ Partial Class ReservacionDeCursos
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(74, 196)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(903, 371)
+        Me.GroupBox1.Size = New System.Drawing.Size(954, 371)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(774, 102)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(157, 32)
+        Me.ComboBox2.TabIndex = 35
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(182, 40)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(178, 32)
+        Me.ComboBox1.TabIndex = 34
+        '
+        'Button2
+        '
+        Me.Button2.ForeColor = System.Drawing.Color.Black
+        Me.Button2.Location = New System.Drawing.Point(648, 310)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(99, 44)
+        Me.Button2.TabIndex = 33
+        Me.Button2.Text = "Fecha"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(414, 48)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 32
+        '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(764, 310)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(120, 44)
+        Me.Button1.TabIndex = 14
+        Me.Button1.Text = "Reservar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TelefonoTextBox
+        '
+        Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Telefono", True))
+        Me.TelefonoTextBox.Location = New System.Drawing.Point(121, 258)
+        Me.TelefonoTextBox.Name = "TelefonoTextBox"
+        Me.TelefonoTextBox.Size = New System.Drawing.Size(239, 32)
+        Me.TelefonoTextBox.TabIndex = 13
+        '
+        'ReservaCursosBindingSource
+        '
+        Me.ReservaCursosBindingSource.DataMember = "ReservaCursos"
+        Me.ReservaCursosBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
+        '
+        'BD_Sistema_GCADBYDataSet
+        '
+        Me.BD_Sistema_GCADBYDataSet.DataSetName = "BD_Sistema_GCADBYDataSet"
+        Me.BD_Sistema_GCADBYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ApellidoTextBox
+        '
+        Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Apellido", True))
+        Me.ApellidoTextBox.Location = New System.Drawing.Point(121, 206)
+        Me.ApellidoTextBox.Name = "ApellidoTextBox"
+        Me.ApellidoTextBox.Size = New System.Drawing.Size(239, 32)
+        Me.ApellidoTextBox.TabIndex = 11
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Nombre", True))
+        Me.NombreTextBox.Location = New System.Drawing.Point(121, 156)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(239, 32)
+        Me.NombreTextBox.TabIndex = 9
+        '
+        'FechaTextBox
+        '
+        Me.FechaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Fecha", True))
+        Me.FechaTextBox.Location = New System.Drawing.Point(774, 52)
+        Me.FechaTextBox.Name = "FechaTextBox"
+        Me.FechaTextBox.Size = New System.Drawing.Size(157, 32)
+        Me.FechaTextBox.TabIndex = 5
+        '
+        'CostoTextBox
+        '
+        Me.CostoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Costo", True))
+        Me.CostoTextBox.Location = New System.Drawing.Point(182, 83)
+        Me.CostoTextBox.Name = "CostoTextBox"
+        Me.CostoTextBox.Size = New System.Drawing.Size(178, 32)
+        Me.CostoTextBox.TabIndex = 3
         '
         'ReservaCursosBindingNavigator
         '
@@ -118,9 +274,34 @@ Partial Class ReservacionDeCursos
         Me.ReservaCursosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ReservaCursosBindingNavigator.Name = "ReservaCursosBindingNavigator"
         Me.ReservaCursosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ReservaCursosBindingNavigator.Size = New System.Drawing.Size(1068, 25)
+        Me.ReservaCursosBindingNavigator.Size = New System.Drawing.Size(1107, 25)
         Me.ReservaCursosBindingNavigator.TabIndex = 1
         Me.ReservaCursosBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -155,16 +336,9 @@ Partial Class ReservacionDeCursos
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -187,26 +361,8 @@ Partial Class ReservacionDeCursos
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'ReservaCursosBindingNavigatorSaveItem
         '
@@ -215,120 +371,6 @@ Partial Class ReservacionDeCursos
         Me.ReservaCursosBindingNavigatorSaveItem.Name = "ReservaCursosBindingNavigatorSaveItem"
         Me.ReservaCursosBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ReservaCursosBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'Tipo_de_CursoLabel
-        '
-        Tipo_de_CursoLabel.AutoSize = True
-        Tipo_de_CursoLabel.Location = New System.Drawing.Point(30, 48)
-        Tipo_de_CursoLabel.Name = "Tipo_de_CursoLabel"
-        Tipo_de_CursoLabel.Size = New System.Drawing.Size(146, 24)
-        Tipo_de_CursoLabel.TabIndex = 0
-        Tipo_de_CursoLabel.Text = "Tipo de Curso:"
-        '
-        'CostoLabel
-        '
-        CostoLabel.AutoSize = True
-        CostoLabel.Location = New System.Drawing.Point(104, 86)
-        CostoLabel.Name = "CostoLabel"
-        CostoLabel.Size = New System.Drawing.Size(72, 24)
-        CostoLabel.TabIndex = 2
-        CostoLabel.Text = "Costo:"
-        '
-        'CostoTextBox
-        '
-        Me.CostoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Costo", True))
-        Me.CostoTextBox.Location = New System.Drawing.Point(182, 83)
-        Me.CostoTextBox.Name = "CostoTextBox"
-        Me.CostoTextBox.Size = New System.Drawing.Size(178, 32)
-        Me.CostoTextBox.TabIndex = 3
-        '
-        'FechaLabel
-        '
-        FechaLabel.AutoSize = True
-        FechaLabel.Location = New System.Drawing.Point(693, 55)
-        FechaLabel.Name = "FechaLabel"
-        FechaLabel.Size = New System.Drawing.Size(75, 24)
-        FechaLabel.TabIndex = 4
-        FechaLabel.Text = "Fecha:"
-        '
-        'FechaTextBox
-        '
-        Me.FechaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Fecha", True))
-        Me.FechaTextBox.Location = New System.Drawing.Point(774, 52)
-        Me.FechaTextBox.Name = "FechaTextBox"
-        Me.FechaTextBox.Size = New System.Drawing.Size(100, 32)
-        Me.FechaTextBox.TabIndex = 5
-        '
-        'HorarioLabel
-        '
-        HorarioLabel.AutoSize = True
-        HorarioLabel.Location = New System.Drawing.Point(683, 105)
-        HorarioLabel.Name = "HorarioLabel"
-        HorarioLabel.Size = New System.Drawing.Size(85, 24)
-        HorarioLabel.TabIndex = 6
-        HorarioLabel.Text = "Horario:"
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(27, 159)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(88, 24)
-        NombreLabel.TabIndex = 8
-        NombreLabel.Text = "Nombre:"
-        '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(121, 156)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(100, 32)
-        Me.NombreTextBox.TabIndex = 9
-        '
-        'ApellidoLabel
-        '
-        ApellidoLabel.AutoSize = True
-        ApellidoLabel.Location = New System.Drawing.Point(27, 209)
-        ApellidoLabel.Name = "ApellidoLabel"
-        ApellidoLabel.Size = New System.Drawing.Size(88, 24)
-        ApellidoLabel.TabIndex = 10
-        ApellidoLabel.Text = "Apellido:"
-        AddHandler ApellidoLabel.Click, AddressOf Me.ApellidoLabel_Click
-        '
-        'ApellidoTextBox
-        '
-        Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Apellido", True))
-        Me.ApellidoTextBox.Location = New System.Drawing.Point(121, 206)
-        Me.ApellidoTextBox.Name = "ApellidoTextBox"
-        Me.ApellidoTextBox.Size = New System.Drawing.Size(100, 32)
-        Me.ApellidoTextBox.TabIndex = 11
-        '
-        'TelefonoLabel
-        '
-        TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(20, 261)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(95, 24)
-        TelefonoLabel.TabIndex = 12
-        TelefonoLabel.Text = "Telefono:"
-        '
-        'TelefonoTextBox
-        '
-        Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReservaCursosBindingSource, "Telefono", True))
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(121, 258)
-        Me.TelefonoTextBox.Name = "TelefonoTextBox"
-        Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 32)
-        Me.TelefonoTextBox.TabIndex = 13
-        '
-        'Button1
-        '
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(764, 310)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 44)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Reservar"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'PictureBox2
         '
@@ -348,7 +390,7 @@ Partial Class ReservacionDeCursos
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBack
         Me.IconButton1.IconColor = System.Drawing.Color.White
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(997, 536)
+        Me.IconButton1.Location = New System.Drawing.Point(1036, 539)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(59, 59)
         Me.IconButton1.TabIndex = 20
@@ -367,48 +409,6 @@ Partial Class ReservacionDeCursos
         Me.Label1.TabIndex = 21
         Me.Label1.Text = "Reservacion de Cursos"
         '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(414, 48)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 32
-        '
-        'Button2
-        '
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(648, 310)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(99, 44)
-        Me.Button2.TabIndex = 33
-        Me.Button2.Text = "Fecha"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(182, 40)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(178, 32)
-        Me.ComboBox1.TabIndex = 34
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(764, 102)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 32)
-        Me.ComboBox2.TabIndex = 35
-        '
-        'ReservaCursosBindingSource
-        '
-        Me.ReservaCursosBindingSource.DataMember = "ReservaCursos"
-        Me.ReservaCursosBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
-        '
-        'BD_Sistema_GCADBYDataSet
-        '
-        Me.BD_Sistema_GCADBYDataSet.DataSetName = "BD_Sistema_GCADBYDataSet"
-        Me.BD_Sistema_GCADBYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ReservaCursosTableAdapter
         '
         Me.ReservaCursosTableAdapter.ClearBeforeFill = True
@@ -421,6 +421,7 @@ Partial Class ReservacionDeCursos
         Me.TableAdapterManager.CuentasTableAdapter = Nothing
         Me.TableAdapterManager.CursosTableAdapter = Nothing
         Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.InventarioTableAdapter = Nothing
         Me.TableAdapterManager.Reservacion_de_CitasTableAdapter = Nothing
         Me.TableAdapterManager.ReservaCursosTableAdapter = Me.ReservaCursosTableAdapter
         Me.TableAdapterManager.ServiciosTableAdapter = Nothing
@@ -433,7 +434,7 @@ Partial Class ReservacionDeCursos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1068, 607)
+        Me.ClientSize = New System.Drawing.Size(1107, 610)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.PictureBox2)
@@ -443,12 +444,12 @@ Partial Class ReservacionDeCursos
         Me.Text = "ReservacionDeCursos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReservaCursosBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ReservaCursosBindingNavigator.ResumeLayout(False)
         Me.ReservaCursosBindingNavigator.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ReservaCursosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
