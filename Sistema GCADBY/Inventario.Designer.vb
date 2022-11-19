@@ -38,18 +38,13 @@ Partial Class Inventario
         Me.InventarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InventarioTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.InventarioTableAdapter()
         Me.TableAdapterManager = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager()
-        Me.InventarioDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.InventarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InventarioBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InventarioBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InventarioBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.CursosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaGCADBYDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,8 +53,11 @@ Partial Class Inventario
         CType(Me.ServiciosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ServiciosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InventarioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventarioBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventarioBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventarioBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CursosBindingSource
@@ -152,65 +150,6 @@ Partial Class Inventario
         Me.TableAdapterManager.UpdateOrder = Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
-        'InventarioDataGridView
-        '
-        Me.InventarioDataGridView.AutoGenerateColumns = False
-        Me.InventarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.InventarioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
-        Me.InventarioDataGridView.DataSource = Me.InventarioBindingSource
-        Me.InventarioDataGridView.Location = New System.Drawing.Point(81, 124)
-        Me.InventarioDataGridView.Name = "InventarioDataGridView"
-        Me.InventarioDataGridView.Size = New System.Drawing.Size(848, 302)
-        Me.InventarioDataGridView.TabIndex = 21
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Id"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Nombre Producto"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Nombre Producto"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Descripcion"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Descripcion"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Tratamiento  o Servicio"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Tratamiento  o Servicio"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Descontinuado"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Descontinuado"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Stock"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Stock"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Precio unitario"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Precio unitario"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Precio venta"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Precio venta"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -245,16 +184,35 @@ Partial Class Inventario
         Me.Button1.Text = "Dar de Alta productos"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'InventarioBindingSource1
+        '
+        Me.InventarioBindingSource1.DataMember = "Inventario"
+        Me.InventarioBindingSource1.DataSource = Me.BD_Sistema_GCADBYDataSet
+        '
+        'InventarioBindingSource2
+        '
+        Me.InventarioBindingSource2.DataMember = "Inventario"
+        Me.InventarioBindingSource2.DataSource = Me.BDSistemaGCADBYDataSetBindingSource
+        '
+        'InventarioBindingSource3
+        '
+        Me.InventarioBindingSource3.DataMember = "Inventario"
+        Me.InventarioBindingSource3.DataSource = Me.BDSistemaGCADBYDataSetBindingSource
+        '
+        'InventarioBindingSource4
+        '
+        Me.InventarioBindingSource4.DataMember = "Inventario"
+        Me.InventarioBindingSource4.DataSource = Me.BD_Sistema_GCADBYDataSet
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1035, 503)
+        Me.ClientSize = New System.Drawing.Size(1035, 511)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.InventarioDataGridView)
         Me.Controls.Add(Me.IconButton1)
         Me.ForeColor = System.Drawing.Color.White
         Me.Name = "Inventario"
@@ -267,8 +225,11 @@ Partial Class Inventario
         CType(Me.ServiciosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ServiciosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InventarioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventarioBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventarioBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventarioBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -288,16 +249,11 @@ Partial Class Inventario
     Friend WithEvents InventarioBindingSource As BindingSource
     Friend WithEvents InventarioTableAdapter As BD_Sistema_GCADBYDataSetTableAdapters.InventarioTableAdapter
     Friend WithEvents TableAdapterManager As BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents InventarioDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents InventarioBindingSource1 As BindingSource
+    Friend WithEvents InventarioBindingSource2 As BindingSource
+    Friend WithEvents InventarioBindingSource3 As BindingSource
+    Friend WithEvents InventarioBindingSource4 As BindingSource
 End Class

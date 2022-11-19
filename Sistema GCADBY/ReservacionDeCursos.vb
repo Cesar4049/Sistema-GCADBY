@@ -33,6 +33,7 @@
         Me.ReservaCursosTableAdapter.Fill(Me.BD_Sistema_GCADBYDataSet.ReservaCursos)
         Me.ReservaCursosBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BD_Sistema_GCADBYDataSet)
+        MsgBox("Registro Exitoso")
     End Sub
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter

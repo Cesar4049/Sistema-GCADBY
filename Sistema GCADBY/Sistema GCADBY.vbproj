@@ -111,6 +111,11 @@
     <Compile Include="----.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BD_Sistema_GCADBYDataSet12.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_Sistema_GCADBYDataSet12.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaCursos.Designer.vb">
       <DependentUpon>ConsultaCursos.vb</DependentUpon>
     </Compile>
@@ -133,6 +138,12 @@
       <DependentUpon>CitasConsultas.vb</DependentUpon>
     </Compile>
     <Compile Include="CitasConsultas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IInventari.Designer.vb">
+      <DependentUpon>IInventari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IInventari.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicio de Sesion.vb">
@@ -229,6 +240,9 @@
     <EmbeddedResource Include="CitasConsultas.resx">
       <DependentUpon>CitasConsultas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IInventari.resx">
+      <DependentUpon>IInventari.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio de Sesion.resx">
       <DependentUpon>Inicio de Sesion.vb</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +292,17 @@
     <None Include="BD_Sistema_GCADBYDataSet1.xss">
       <DependentUpon>BD_Sistema_GCADBYDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="BD_Sistema_GCADBYDataSet12.xsc">
+      <DependentUpon>BD_Sistema_GCADBYDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="BD_Sistema_GCADBYDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_Sistema_GCADBYDataSet12.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_Sistema_GCADBYDataSet12.xss">
+      <DependentUpon>BD_Sistema_GCADBYDataSet12.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -300,6 +325,12 @@
     <Content Include="BD Sistema GCADBY.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\inventario.png" />
+    <None Include="Resources\curso-por-internet.png" />
+    <None Include="Resources\biblioteca %281%29.png" />
+    <None Include="Resources\biblioteca.png" />
+    <None Include="Resources\calendario.png" />
+    <None Include="Resources\cita-medica.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
