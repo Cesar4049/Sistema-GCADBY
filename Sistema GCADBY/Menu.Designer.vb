@@ -24,7 +24,9 @@ Partial Class MenuS
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,8 +36,6 @@ Partial Class MenuS
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,6 +74,16 @@ Partial Class MenuS
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(16, 457)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(119, 32)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Cerrar Sesion"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -85,6 +95,17 @@ Partial Class MenuS
         Me.Label6.Size = New System.Drawing.Size(142, 34)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Inventario"
+        '
+        'IconButton2
+        '
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.Location = New System.Drawing.Point(916, 447)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(41, 42)
+        Me.IconButton2.TabIndex = 6
+        Me.IconButton2.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -197,27 +218,6 @@ Partial Class MenuS
         Me.Button2.TabIndex = 0
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(16, 457)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(119, 32)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Cerrar Sesion"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'IconButton2
-        '
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.Location = New System.Drawing.Point(916, 447)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(41, 42)
-        Me.IconButton2.TabIndex = 6
-        Me.IconButton2.UseVisualStyleBackColor = True
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Sistema_GCADBY.My.Resources.Resources.Logo
@@ -233,7 +233,7 @@ Partial Class MenuS
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1075, 749)
+        Me.ClientSize = New System.Drawing.Size(1075, 728)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.GroupBox1)
