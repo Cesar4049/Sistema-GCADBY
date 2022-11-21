@@ -30,6 +30,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.CuentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
@@ -50,7 +51,6 @@ Partial Class Form1
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CuentasBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.Button2 = New System.Windows.Forms.Button()
         UsuarioLabel = New System.Windows.Forms.Label()
         PasswordLabel = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,7 +110,7 @@ Partial Class Form1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(162, 24)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Inicio de Sesion"
+        Me.Label2.Text = "Inicio de Sesión"
         '
         'GroupBox1
         '
@@ -126,6 +126,17 @@ Partial Class Form1
         Me.GroupBox1.Size = New System.Drawing.Size(432, 220)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button2.Location = New System.Drawing.Point(48, 163)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(131, 28)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Registrar"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'PasswordTextBox
         '
@@ -162,7 +173,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(131, 28)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Iniciar Sesion"
+        Me.Button1.Text = "Iniciar Sesión"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'CuentasTableAdapter
@@ -177,6 +188,7 @@ Partial Class Form1
         Me.TableAdapterManager.CuentasTableAdapter = Me.CuentasTableAdapter
         Me.TableAdapterManager.CursosTableAdapter = Nothing
         Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.InventarioTableAdapter = Nothing
         Me.TableAdapterManager.Reservacion_de_CitasTableAdapter = Nothing
         Me.TableAdapterManager.ReservaCursosTableAdapter = Nothing
         Me.TableAdapterManager.ServiciosTableAdapter = Nothing
@@ -296,17 +308,6 @@ Partial Class Form1
         Me.CuentasBindingNavigatorSaveItem.Name = "CuentasBindingNavigatorSaveItem"
         Me.CuentasBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CuentasBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button2.Location = New System.Drawing.Point(48, 163)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(131, 28)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Registrar"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Form1
         '

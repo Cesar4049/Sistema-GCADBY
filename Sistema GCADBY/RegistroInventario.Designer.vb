@@ -91,7 +91,7 @@ Partial Class RegistroInventario
         DescripcionLabel.Name = "DescripcionLabel"
         DescripcionLabel.Size = New System.Drawing.Size(165, 32)
         DescripcionLabel.TabIndex = 4
-        DescripcionLabel.Text = "Descripcion:"
+        DescripcionLabel.Text = "Descripción:"
         '
         'Tratamiento__o_ServicioLabel
         '

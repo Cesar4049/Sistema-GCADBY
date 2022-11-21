@@ -139,7 +139,7 @@ Partial Class ReservacionDeCursos
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(95, 24)
         TelefonoLabel.TabIndex = 12
-        TelefonoLabel.Text = "Telefono:"
+        TelefonoLabel.Text = "Teléfono:"
         '
         'GroupBox1
         '
@@ -407,7 +407,7 @@ Partial Class ReservacionDeCursos
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(374, 38)
         Me.Label1.TabIndex = 21
-        Me.Label1.Text = "Reservacion de Cursos"
+        Me.Label1.Text = "Reservación de Cursos"
         '
         'ReservaCursosTableAdapter
         '

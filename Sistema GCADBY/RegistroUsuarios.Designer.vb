@@ -95,7 +95,7 @@ Partial Class RegistroUsuarios
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(89, 22)
         TelefonoLabel.TabIndex = 4
-        TelefonoLabel.Text = "Telefono:"
+        TelefonoLabel.Text = "Teléfono:"
         '
         'CorreoLabel
         '
@@ -145,7 +145,12 @@ Partial Class RegistroUsuarios
         Me.TableAdapterManager.CompraTableAdapter = Nothing
         Me.TableAdapterManager.CuentasTableAdapter = Me.CuentasTableAdapter
         Me.TableAdapterManager.CursosTableAdapter = Nothing
+        Me.TableAdapterManager.Horario_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.InventarioTableAdapter = Nothing
+        Me.TableAdapterManager.Reservacion_de_CitasTableAdapter = Nothing
+        Me.TableAdapterManager.ReservaCursosTableAdapter = Nothing
         Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.TipoServicioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
