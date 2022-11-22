@@ -56,9 +56,7 @@ Partial Class MenuS
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.IconButton2)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -77,7 +75,7 @@ Partial Class MenuS
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(16, 457)
+        Me.Button1.Location = New System.Drawing.Point(64, 703)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 32)
         Me.Button1.TabIndex = 7
@@ -101,7 +99,7 @@ Partial Class MenuS
         Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket
         Me.IconButton2.IconColor = System.Drawing.Color.Black
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.Location = New System.Drawing.Point(916, 447)
+        Me.IconButton2.Location = New System.Drawing.Point(995, 703)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(41, 42)
         Me.IconButton2.TabIndex = 6
@@ -233,7 +231,9 @@ Partial Class MenuS
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1075, 728)
+        Me.ClientSize = New System.Drawing.Size(1075, 749)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.IconButton2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.GroupBox1)

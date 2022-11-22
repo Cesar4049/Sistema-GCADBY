@@ -24,9 +24,6 @@ Partial Class IInventari
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
-        Me.InventarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.InventarioTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.InventarioTableAdapter()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,13 +32,16 @@ Partial Class IInventari
         Me.StockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioVentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InventarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BD_Sistema_GCADBYDataSet = New Sistema_GCADBY.BD_Sistema_GCADBYDataSet()
+        Me.InventarioTableAdapter = New Sistema_GCADBY.BD_Sistema_GCADBYDataSetTableAdapters.InventarioTableAdapter()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,20 +55,6 @@ Partial Class IInventari
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(889, 308)
         Me.DataGridView1.TabIndex = 0
-        '
-        'BD_Sistema_GCADBYDataSet
-        '
-        Me.BD_Sistema_GCADBYDataSet.DataSetName = "BD_Sistema_GCADBYDataSet"
-        Me.BD_Sistema_GCADBYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'InventarioBindingSource
-        '
-        Me.InventarioBindingSource.DataMember = "Inventario"
-        Me.InventarioBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
-        '
-        'InventarioTableAdapter
-        '
-        Me.InventarioTableAdapter.ClearBeforeFill = True
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -118,6 +104,20 @@ Partial Class IInventari
         Me.PrecioVentaDataGridViewTextBoxColumn.HeaderText = "Precio venta"
         Me.PrecioVentaDataGridViewTextBoxColumn.Name = "PrecioVentaDataGridViewTextBoxColumn"
         '
+        'InventarioBindingSource
+        '
+        Me.InventarioBindingSource.DataMember = "Inventario"
+        Me.InventarioBindingSource.DataSource = Me.BD_Sistema_GCADBYDataSet
+        '
+        'BD_Sistema_GCADBYDataSet
+        '
+        Me.BD_Sistema_GCADBYDataSet.DataSetName = "BD_Sistema_GCADBYDataSet"
+        Me.BD_Sistema_GCADBYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'InventarioTableAdapter
+        '
+        Me.InventarioTableAdapter.ClearBeforeFill = True
+        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Sistema_GCADBY.My.Resources.Resources.Logo
@@ -136,9 +136,9 @@ Partial Class IInventari
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(374, 59)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(321, 38)
+        Me.Label1.Size = New System.Drawing.Size(365, 38)
         Me.Label1.TabIndex = 25
-        Me.Label1.Text = "Consulta de Cursos"
+        Me.Label1.Text = "Consulta de Inventario"
         Me.Label1.UseMnemonic = False
         '
         'IconButton1
@@ -180,8 +180,8 @@ Partial Class IInventari
         Me.Name = "IInventari"
         Me.Text = "IInventari"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_Sistema_GCADBYDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
